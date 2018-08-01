@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)https://www.zhangxinxu.com/study/201308/target-pseudo-class-element-show.html#7d -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="description" content=":target与锚点元素的可用性隐藏 » 张鑫旭-鑫空间-鑫生活">
+<meta name="description" content="张鑫旭web前端学习实例页面 :target与锚点元素的可用性隐藏">
+<meta name="keywords" content=":target伪类, 锚点, 显示与隐藏, 纯CSS">
+<meta name="author" content="张鑫旭, zhangxixnu">
+<title>:target与锚点元素的可用性隐藏 » 张鑫旭-鑫空间-鑫生活</title>
+<style>
+
+/* 下面这些为本demo示意所在 */
+
+.a2 {
+	display: none;
+}
+.pan2 {
+     display:none;
+}
+
+
+.demo:target .a1 {
+    display: none;
+}
+.demo:target .a2 {
+    display: inline;
+}
+.demo:target .pan2 {
+    display: block;
+}
+</style>
+
+<body>
+        <div id="7d" class="demo">
+            <a class="a1" href="#7d">查看未来4-7天天气预报</a>
+            <a class="a2" href="#3d">收起未来4-7天天气预报</a>
+
+            <div id="3d" class="pan2">
+                456
+            </div>
+        </div>
+    </body>
+</html>
