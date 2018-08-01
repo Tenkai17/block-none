@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>点击a标签链接同时设置checkbox为true</title>
+</head>
+<body>
+<input type="checkbox" id="chk">
+<label for="chk">选中它<a onclick="this.parentNode.click();" href="#">[label中的链接]</a></label>
+	
+<br/>
+	
+<label for="chk22">选中它<input type="checkbox" id="chk22"><a onclick="this.parentNode.click();" href="#">[label中的链接]</a></label>
+</body>
+</html>
