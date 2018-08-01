@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+	<style>
+	 .details{
+		position: relative;
+	  }
+		
+    .summary{width: 120px; font-size: 14px; height: 34px; background: #165a99; color: #fff; line-height: 34px; text-align: center; cursor: pointer; display: inline-block; outline: none;}
+
+    .box {display: block; position: absolute; width: calc(100% - 2px); background: #fff; border: 1px solid #ccd6d7; padding: 3px 0;}
+    .box label{display:inline-block; width: calc(100% - 16px); height: 32px; line-height: 32px; padding: 0 8px; outline: none;}
+    .box label:hover{background: #f2f2f2}
+    .box input{vertical-align: middle; margin-right: 4px;}
+
+    .details:focus-within .box {display: block;}
+		
+	.bbb[type=checkbox]:checked + span{
+		color:#999;
+	}
+		
+	//主要的	
+	.main{display:none}
+	#input01[type=checkbox]:checked + .main{
+		display:block;
+		color:#999;
+	}
+	.lable i:before{
+		content: " - ";   
+		display:inline-block;
+	}
+	.lable[zuantai="true"] i:before {
+		content: " + ";
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<input id="input01" type="checkbox" name="O3">
+		<div class="main">123</div>
+		<input id="input02" type="checkbox" name="NO2">
+		<input id="input03" type="checkbox" name="SO2">
+	</div>
+
+	<div id="details" class="search__list details">
+		<span class="summary" tabindex="0">+ 添加条件</span>
+		<div class="box">
+			<label tabindex="0"><input class="bbb" type="checkbox" name="全选"><span>全选</span></label>
+			<label class="lable" for="input01"><i></i>O3</label>
+			<label class="lable" for="input02"><i></i>NO2</label>
+			<label class="lable" for="input03"><i></i>SO2</label>
+		</div>
+	</div>
+	
+	<script>
+	var linshi = function () {
+        var details = document.getElementById("details");
+        var label = details.getElementsByTagName("label");
+        for(var a = 0, len = label.length; a < len; a++){
+            label[a].onclick = function () {
+				this.getAttribute("zuantai") ? this.removeAttribute("zuantai") : this.setAttribute("zuantai", "true");
+            }
+        }
+    };
+	linshi();
+	</script>
+
+</body>
+</html>
